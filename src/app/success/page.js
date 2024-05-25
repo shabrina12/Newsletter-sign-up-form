@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import iconSuccess from "../../../public/assets/images/icon-success.svg"
 import { useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 
 const success = () => {
   const searchParams = useSearchParams()
@@ -14,7 +15,9 @@ const success = () => {
         <div className="flex flex-col gap-6">
           <Image src={iconSuccess} width={60} height={60} alt="icon success" />
           <h1 className="text-5xl font-semibold mt-2">Thanks for subscribing!</h1>
-          <p>A confirmation email has been sent to <span className="font-semibold">{email}</span>. Please open it and click the button inside to confirm your subscription.</p>
+          <Suspense> {/*Ensure that calls to useSearchParams() are wrapped in a Suspense boundary. */}
+            <p>A confirmation email has been sent to <span className="font-semibold">{email}</span>. Please open it and click the button inside to confirm your subscription.</p>
+          </Suspense>
         </div>
         
         <Link href='/'> 

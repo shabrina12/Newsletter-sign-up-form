@@ -82,7 +82,7 @@ export default function Home() {
                   }} 
               > 
                 <button
-                  disabled={!isFormValid} onClick={handleSubmit} className="bg-charcoal-grey w-full text-white text-center py-4 rounded-lg mt-4" >
+                  disabled={!isFormValid} onClick={handleSubmit} className={!isFormValid ? 'bg-charcoal-grey w-full text-white text-center py-4 rounded-lg mt-4' : 'bg-charcoal-grey w-full text-white text-center py-4 rounded-lg mt-4 hover:btn-gradient'} >
                   Subscribe to monthly newsletter
                 </button>
               </Link>

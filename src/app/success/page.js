@@ -18,7 +18,7 @@ const success = () => {
         </div>
         
         <Link href='/'> 
-          <div className="bg-charcoal-grey text-white text-center py-4 rounded-lg mt-2">
+          <div className="bg-charcoal-grey text-white text-center py-4 rounded-lg mt-2 hover:btn-gradient">
             <button>Dismiss message</button>
           </div>  
         </Link> 

@@ -1,5 +1,6 @@
 'use client'
 import {useState, useEffect} from 'react';
+import Link from 'next/link';
 import Image from "next/image";
 import iconList from "../../public/assets/images/icon-list.svg"
 
@@ -66,17 +67,26 @@ export default function Home() {
               </div>
               
               <input 
-                    className={errors ? 'emailError rounded-lg' : 'emailDefault rounded-lg'}
+                    className={errors ? 'emailError rounded-lg bg-red-100' : 'emailDefault rounded-lg'}
                     placeholder="email@company.com"
                     value={email} 
                     onChange={(e) => setEmail(e.target.value)} 
                     type="email"
                 /> 
-        
-              <button className="bg-charcoal-grey text-white py-4 rounded-lg mt-4"
-                disabled={!isFormValid} onClick={handleSubmit} >
-                Subscribe to monthly newsletter
-              </button>
+
+              <Link href={{
+                    pathname: '/success',
+                    query: {
+                      search: `${email}` //for passing user input email to page /success
+                    }
+                  }} 
+              > 
+                <button
+                  disabled={!isFormValid} onClick={handleSubmit} className="bg-charcoal-grey w-full text-white text-center py-4 rounded-lg mt-4" >
+                  Subscribe to monthly newsletter
+                </button>
+              </Link>
+            
             </form>
           </div>
         </div>

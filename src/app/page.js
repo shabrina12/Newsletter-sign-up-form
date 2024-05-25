@@ -1,7 +1,40 @@
+'use client'
+import {useState, useEffect} from 'react';
 import Image from "next/image";
 import iconList from "../../public/assets/images/icon-list.svg"
 
 export default function Home() {
+    const [email, setEmail] = useState(''); 
+    const [errors, setErrors] = useState(''); 
+    const [isFormValid, setIsFormValid] = useState(false); 
+    
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/gi;
+
+    useEffect(() => { 
+      validateForm(); 
+    }, [email]); 
+
+    // Validate form 
+    const validateForm = () => { 
+      let errors = ''; 
+  
+      if (!email || !emailRegex.test(email)) { 
+        errors = 'Valid email required'; 
+      }
+
+      setErrors(errors); 
+      setIsFormValid(errors.length === 0); 
+    }; 
+
+    // Submit 
+    const handleSubmit = () => { 
+      if (isFormValid) { 
+        console.log('Form submitted successfully!'); 
+      } else { 
+        console.log('Form has errors. Please correct them.'); 
+      } 
+    }; 
+
   return (
     <main className="font-roboto flex xs:bg-white md:bg-dark-grey min-h-screen flex-col items-center justify-between md:p-24">
       <div className="flex xs:flex-col-reverse md:flex-row bg-white md:py-4 xs:pb-14 sm:pb-0 md:rounded-2xl gap-6 md:w-[800px] xs:h-[800px] md:h-[500px]">
@@ -25,10 +58,26 @@ export default function Home() {
                 </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-2">
-            <h4 className="font-semibold text-sm">Email address</h4>
-            <input className="border-2 rounded-lg py-2 px-4" placeholder="email@company.com" />
-            <button className="bg-charcoal-grey text-white py-4 rounded-lg scroll-mt-4">Subscribe to monthly newsletter</button>
+          <div>
+            <form className="flex flex-col gap-2" >
+              <div className='flex justify-between'>
+                <h4 className="font-semibold text-sm">Email address</h4>
+                {errors && <h4 className="text-sm text-error">{errors}</h4>} {/* to show error text when email is invalid */}
+              </div>
+              
+              <input 
+                    className={errors ? 'emailError rounded-lg' : 'emailDefault rounded-lg'}
+                    placeholder="email@company.com"
+                    value={email} 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    type="email"
+                /> 
+        
+              <button className="bg-charcoal-grey text-white py-4 rounded-lg mt-4"
+                disabled={!isFormValid} onClick={handleSubmit} >
+                Subscribe to monthly newsletter
+              </button>
+            </form>
           </div>
         </div>
 

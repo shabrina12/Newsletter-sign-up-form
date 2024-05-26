@@ -62,8 +62,8 @@ export default function Home() {
           <div>
             <form className="flex flex-col gap-2" >
               <div className='flex justify-between'>
-                <h4 className="font-semibold text-sm">Email address</h4>
-                {errors && <h4 className="text-sm text-error">{errors}</h4>} {/* to show error text when email is invalid */}
+                <h1 className="font-semibold text-sm">Email address</h1>
+                {errors && <h1 className="text-sm text-error">{errors}</h1>} {/* to show error text when email is invalid */}
               </div>
               
               <input 

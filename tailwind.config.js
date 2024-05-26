@@ -24,7 +24,7 @@ module.exports = {
         'tomato': 'hsl(4, 100%, 67%)',
       },
       screens: {
-        'xs': '375px',
+        'xs': '300px',
         'sm': '640px',
         'md': '790px',
         'lg': '1024px',

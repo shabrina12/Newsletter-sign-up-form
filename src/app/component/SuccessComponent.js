@@ -5,7 +5,7 @@ const SuccessComponent = () => {
     const email = (searchParams.get('search')); //get user input email from home page
 
     return (
-        <p>A confirmation email has been sent to <span className="font-semibold">{email}</span>. Please open it and click the button inside to confirm your subscription.</p>
+        <p className='text-black'>A confirmation email has been sent to <span className="font-semibold">{email}</span>. Please open it and click the button inside to confirm your subscription.</p>
     )
 }
 

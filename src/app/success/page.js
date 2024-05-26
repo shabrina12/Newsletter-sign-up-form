@@ -7,7 +7,7 @@ import { Suspense } from 'react'
 
 const success = () => {
   return (
-    <main className="font-roboto flex xs:bg-white md:bg-dark-grey min-h-screen flex-col items-center justify-between md:p-24">
+    <main className="font-roboto text-black flex xs:bg-white md:bg-dark-grey min-h-screen flex-col items-center justify-between md:p-24">
       <div className="flex flex-col justify-between xs:border-black bg-white xs:py-20 md:py-8 xs:px-8 md:px-12 md:rounded-2xl gap-6 xs:min-h-[700px] md:w-[450px] md:min-h-[450px]">
         <div className="flex flex-col gap-6">
           <Image src={iconSuccess} width={60} height={60} alt="icon success" />

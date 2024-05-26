@@ -31,8 +31,12 @@ Users should be able to:
 
 ## Useful Resources
 
-- [useSearchParams() wrapped in Suspense boundary](https://stackoverflow.com/questions/78439067/how-do-you-get-rid-of-usesearchparams-and-suspense-deployment-error) - an interactive Next.js tutorial.
-- [Form validation in Nextjs](https://www.geeksforgeeks.org/how-to-add-form-validation-in-next-js/) - Name,email,password validation in Next js
+- [useSearchParams() wrapped in Suspense boundary](https://stackoverflow.com/questions/78439067/how-do-you-get-rid-of-usesearchparams-and-suspense-deployment-error) - How to get rid of useSearchParams() and Suspense deployment error
+- [Form validation in Nextjs](https://www.geeksforgeeks.org/how-to-add-form-validation-in-next-js/) - Name, email, password validation in Next js
+
+## Author
+
+Github - [Shabrina Putri](https://github.com/shabrina12)
 
 ## Getting Started 🚀
 

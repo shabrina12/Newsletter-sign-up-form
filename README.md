@@ -34,6 +34,10 @@ Users should be able to:
 - [useSearchParams() wrapped in Suspense boundary](https://stackoverflow.com/questions/78439067/how-do-you-get-rid-of-usesearchparams-and-suspense-deployment-error) - How to get rid of useSearchParams() and Suspense deployment error
 - [Form validation in Nextjs](https://www.geeksforgeeks.org/how-to-add-form-validation-in-next-js/) - Name, email, password validation in Next js
 
+## My Frontend Mentor Solution
+
+- [Solution](https://www.frontendmentor.io/solutions/responsive-newsletter-signup-form-with-success-message--QD4iGTpal)
+
 ## Author
 
 Github - [Shabrina Putri](https://github.com/shabrina12)

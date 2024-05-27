@@ -37,7 +37,7 @@ export default function Home() {
     }; 
 
   return (
-    <main className="font-roboto text-black flex xs:bg-white md:bg-dark-grey min-h-screen flex-col items-center justify-between md:p-24">
+    <main className="font-roboto text-black flex xs:bg-white md:bg-dark-grey min-h-screen flex-col items-center justify-center md:p-24">
       <div className="flex xs:flex-col-reverse md:flex-row bg-white md:py-4 xs:pb-14 sm:pb-0 md:rounded-2xl gap-6 md:w-[800px] xs:h-[800px] md:h-[500px]">
         {/* LEFT SIDE ON DESKTOP / BOTTOM SIDE ON MOBILE */}
         <div className="left flex-1 flex flex-col justify-center gap-8 xs:px-8">
